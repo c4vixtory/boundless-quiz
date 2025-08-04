@@ -1,4 +1,3 @@
-/* 🌈 Reset and Body Styling */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,7 +14,35 @@ body {
   padding: 20px;
 }
 
-/* 📦 Quiz Container */
+/* Start Screen */
+.start-screen {
+  text-align: center;
+}
+
+#username {
+  padding: 10px;
+  width: 80%;
+  max-width: 300px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+#start-btn {
+  background-color: #6a5acd;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#start-btn:hover {
+  background-color: #5a4dbf;
+}
+
+/* Quiz Container */
 .quiz-container {
   background: #ffffff;
   padding: 30px;
@@ -26,14 +53,13 @@ body {
   text-align: center;
 }
 
-/* ❓ Question Styling */
 #question {
   font-size: 1.3rem;
   margin-bottom: 20px;
   color: #4c3c7d;
 }
 
-/* ✨ Answer Choices */
+/* Answer Choices */
 #choices {
   list-style: none;
   padding: 0;
@@ -55,7 +81,7 @@ body {
   transform: scale(1.02);
 }
 
-/* ✅ Next Button */
+/* Next Button */
 #next-btn {
   background-color: #7e61ff;
   color: white;
@@ -71,7 +97,7 @@ body {
   background-color: #6548e0;
 }
 
-/* 🏁 Results */
+/* Results */
 #results {
   font-weight: bold;
   font-size: 1.2rem;
@@ -79,4 +105,29 @@ body {
   color: #5d487c;
 }
 
-/* 🎯 Progress Bar (handled via JS styling) */
+/* Leaderboard */
+.leaderboard {
+  margin-top: 30px;
+  background: #fdfdff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.leaderboard h3 {
+  color: #4c3c7d;
+  margin-bottom: 10px;
+}
+
+#leaderboard-list {
+  list-style: none;
+  padding: 0;
+}
+
+#leaderboard-list li {
+  background-color: #ece9ff;
+  margin: 6px 0;
+  padding: 10px;
+  border-radius: 6px;
+  font-weight: bold;
+}
