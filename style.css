@@ -1,67 +1,81 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f4f6fa;
+  font-family: Arial, sans-serif;
+  background-color: #f7f8fa;
   margin: 0;
   padding: 0;
 }
 
 .container {
-  max-width: 700px;
-  margin: 50px auto;
-  background: #fff;
-  padding: 30px;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 h1 {
   text-align: center;
-  color: #4b0082;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+#quiz {
+  max-height: 70vh;
+  overflow-y: auto;
+  padding-right: 10px;
 }
 
 .question {
-  font-size: 1.2em;
-  margin: 20px 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+  color: #444;
 }
 
 .choices {
   list-style: none;
   padding: 0;
+  margin-bottom: 30px;
 }
 
 .choices li {
-  background: #e4e9f1;
-  margin: 8px 0;
   padding: 10px 15px;
-  border-radius: 4px;
+  margin-bottom: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: all 0.2s ease-in-out;
 }
 
 .choices li:hover {
-  background: #d0d9eb;
+  background-color: #f0f0f0;
 }
 
-.selected {
-  background-color: #c1b6f3;
+.choices li.selected {
+  background-color: #d4fbd4;
+  border-color: #2ecc71;
+  font-weight: bold;
+  color: #2c3e50;
 }
 
 #submit {
   display: block;
   width: 100%;
   padding: 12px;
-  font-size: 1em;
-  margin-top: 20px;
-  background-color: #4b0082;
+  background-color: #2ecc71;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 6px;
+  font-size: 16px;
   cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 20px;
+}
+
+#submit:hover {
+  background-color: #27ae60;
 }
 
 #result {
+  margin-top: 30px;
+  font-size: 18px;
   text-align: center;
-  font-size: 1.1em;
-  margin-top: 20px;
-  color: #2c3e50;
+  color: #333;
 }
