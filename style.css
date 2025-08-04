@@ -1,60 +1,82 @@
-body {
+/* 🌈 Reset and Body Styling */
+* {
+  box-sizing: border-box;
   margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(120deg, #f6f1ff, #e0fff5, #fde7ff);
-  backdrop-filter: blur(20px);
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(to right, #ece9ff, #f9f5ff);
+  padding: 20px;
 }
 
+/* 📦 Quiz Container */
 .quiz-container {
-  background: rgba(255, 255, 255, 0.5);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.05);
-  width: 400px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  width: 100%;
   text-align: center;
-  transition: all 0.3s ease-in-out;
 }
 
-/* Fade animation */
-#question, #choices {
-  transition: opacity 0.5s ease;
+/* ❓ Question Styling */
+#question {
+  font-size: 1.3rem;
+  margin-bottom: 20px;
+  color: #4c3c7d;
 }
 
-li {
-  list-style-type: none;
-  background-color: #ffffff;
-  padding: 10px;
-  margin: 5px 0;
+/* ✨ Answer Choices */
+#choices {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+#choices li {
+  background-color: #f4f0ff;
+  border: 1px solid #ddd;
+  margin: 8px 0;
+  padding: 12px;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Answer feedback colors */
-.correct {
-  background-color: #d6ffe4; /* soft mint green */
+#choices li:hover {
+  background-color: #e2daff;
+  transform: scale(1.02);
 }
 
-.wrong {
-  background-color: #ffe4e4; /* soft blush pink */
-}
-
-button {
-  padding: 10px 20px;
-  margin-top: 1rem;
+/* ✅ Next Button */
+#next-btn {
+  background-color: #7e61ff;
+  color: white;
   border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
   border-radius: 8px;
-  background-color: #c7baff;
-  color: #4a3f80;
-  font-weight: bold;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
-button:hover {
-  background-color: #b5a1ff;
+#next-btn:hover {
+  background-color: #6548e0;
 }
+
+/* 🏁 Results */
+#results {
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #5d487c;
+}
+
+/* 🎯 Progress Bar (handled via JS styling) */
